@@ -1,5 +1,11 @@
 # symfony4-docker
-Docker for Symfony 4 application (with nginx, php 7.2, composer, mysql and elk - elasticsearch logstash and kibana) Edit
+Docker for Symfony 4 application (with nginx, php 7.2, composer, mysql and elk - elasticsearch logstash and kibana)
+
+Optimized for macOS High Sierra
+
+## Requirements
+
+1. [nginx-proxy](https://github.com/jwilder/nginx-proxy)
 
 ## Installation
 

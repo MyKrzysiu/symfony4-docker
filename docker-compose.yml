@@ -2,17 +2,14 @@ version: '3'
 
 services:
     db:
-        image: mysql:5.7
-        volumes:
-            - db-data:/var/lib/mysql
+        image: 'microsoft/mssql-server-linux'
         ports:
-            - 3306
+            - '1433:1433'
         environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: ${MYSQL_DATABASE}
-            MYSQL_USER: ${MYSQL_USER}
-            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=${MSSQL_PASSWORD}
+        volumes:
+            - './drive:/mnt/drive'
     php:
         build:
             context: php7-fpm
